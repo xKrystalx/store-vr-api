@@ -239,7 +239,8 @@ app.post("/order", (req, res) => {
               .then((order_created) => {
                 order_created = order_created.data;
                 let update_data = {
-                  customer_id: customer_data.id
+                  customer_id: customer_data.id,
+                  status: "processing"
                 }
                 api.put("orders/" + order_created.id, update_data)
                   .then((order_updated) => {
