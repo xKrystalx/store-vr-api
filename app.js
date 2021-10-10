@@ -6,7 +6,7 @@ const axios = require('axios').default
 const crypto = require('crypto')
 const OAuth = require('oauth-1.0a')
 const app = express()
-const port = 3000
+const port = process.env.PORT;
 
 const store_url = process.env.STORE_URL;
  
